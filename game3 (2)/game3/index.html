@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emosense</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .feature-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .feature-box {
+            width: calc(33.33% - 20px);
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .feature-image {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            max-height: 200px;
+        }
+        
+        .about-container {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            margin: 20px;
+        }
+        
+        .about-image {
+            flex: 1;
+            /* Make the image take up 50% of the container */
+            margin: 20px;
+        }
+        
+        .about-text {
+            flex: 1;
+            /* Make the text take up 50% of the container */
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Emosense</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Features">Features</a></li>
+            <li><a href="option.html">Demo</a></li>
+            <li><a href="login.html">Sign-in/up</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="heyyya.png" alt="mountains_behind" id="mountains_behind">
+        <img src="heyyya.png" alt="mountains_front" id="mountains_front">
+    </section>
+
+    <div class="sec" id="About">
+        <h2>About Us</h2>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="emotion.jpg" alt="Emosense Team">
+            </div>
+            <div class="about-text">
+                <p>Welcome to Emosense, Hold hands with Emosense to understand your emotions.</p>
+                <p>Emosense is not just a platform; it's your heaven in the digital world.</p>
+
+                <p>Embrace your journey with us. </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="sec" id="Features">
+        <h2>Features</h2>
+        <div class="feature-container">
+            <a href="gamesoptions.html" style="text-decoration: none;" class="feature-box">
+                <img src="games.jpg" alt="Feature 3" class="feature-image">
+                <h3>Engaging Games and Quizzes</h3>
+                <p>Stay engaged with our collection of games and quizzes designed for emotional wellness.</p>
+            </a>
+            <a href="journal.html" style="text-decoration: none;" class="feature-box">
+
+                <img src="journaling.jpg" alt="Feature 4" class="feature-image">
+                <h3>Journaling</h3>
+                <p> Keep a personal journal to express your thoughts and feelings</p>
+
+            </a>
+
+            <a href="chatbot.html" style="text-decoration: none;" class="feature-box">
+                <img src="chat.jpg" alt="Feature 5" class="feature-image">
+                <h3>Chatbot</h3>
+                <p> Chat with our friendly chatbot to relax and engage in conversation.</p>
+            </a>
+            <div class="feature-box">
+
+                <img src="rec.jpg" alt="Feature 1" class="feature-image">
+                <h3>Personalized Recommendation System</h3>
+                <p>Our platform provides personalized recommendations to enhance emotional well-being.</p>
+            </div>
+            <div class="feature-box">
+                <img src="streak.jpg" alt="Feature 2" class="feature-image">
+                <h3>Streaks and Goal Tracking</h3>
+                <p>Track your emotional well-being progress with our streaks and goal tracking feature.</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

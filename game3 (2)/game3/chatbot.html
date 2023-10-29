@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+    <style>
+        /* Add your CSS styling here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .chatbox {
+            max-height: 300px;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chatbot</h1>
+        <div class="chatbox" id="chatbox">
+            <p>Chatbot: Hey there! How can I brighten your day?</p>
+        </div>
+        <input type="text" id="userInput" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        // JavaScript code for chatbot functionality
+        const responses = {
+            "hello": "Hey there! How's your day going?",
+            "how are you": "I'm just a bot, but I'm here to chat with you! How about you?",
+            "good": "That's awesome! Anything exciting happening?",
+
+            "tell me a joke": "Why did the computer keep freezing? Because it left its Windows open! 😄",
+            "tell me something good": "Sure! Did you know that every year, trees help produce oxygen worth $7,000 for each person on Earth? Nature is amazing!",
+            "i'm not feeling well": "I'm here to listen. What's going on? Sometimes talking about it can help.",
+            "you're great": "Thank you! You're pretty awesome yourself! 😊",
+            "you're the best": "Aw, shucks! Thanks! You're pretty fantastic too!",
+            "bye": "Take care! If you ever want to chat, I'll be here.",
+            "thanks": "You're welcome! 😊",
+            "default": "I'm not sure how to respond to that. Tell me more about it!"
+        };
+
+        function appendMessage(user, message) {
+            const chatbox = document.getElementById("chatbox");
+            const newMessage = document.createElement("p");
+            newMessage.textContent = user + ": " + message;
+            chatbox.appendChild(newMessage);
+        }
+
+        function sendMessage() {
+            const userInput = document.getElementById("userInput").value;
+            appendMessage("You", userInput);
+            const response = getResponse(userInput);
+            appendMessage("Chatbot", response);
+            document.getElementById("userInput").value = "";
+        }
+
+        function getResponse(userInput) {
+            userInput = userInput.toLowerCase();
+            for (const key in responses) {
+                if (userInput.includes(key)) {
+                    return responses[key];
+                }
+            }
+            return responses["default"];
+        }
+    </script>
+</body>
+</html>
